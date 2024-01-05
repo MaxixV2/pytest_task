@@ -28,6 +28,7 @@ class TestContactUs:
 
         self.contact_us_page.handle_alert()
         self.contact_us_page.send_message(valid_name, valid_email, valid_subject, valid_message)
+        self.page.keyboard.press("Enter")
         self.contact_us_page.verify_success_message()
 
         take_screenshot(self.page, "Contact Us")
